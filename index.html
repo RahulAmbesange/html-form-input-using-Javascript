@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+
+</head>
+<body class="container-fluid">
+   <div class="mt-3" id="RegisterContainer">
+      <button data-bs-target="#register" data-bs-toggle="modal" class="btn btn-primary" >Register Product</button>
+   </div>
+   <div class="modal fade" id="register">
+      <div class="modal-dialog modal-dialog-centered">
+             <div class="modal-content">
+               <div class="modal-header">
+                  <h2>REGISTER PRODUCT</h2>
+                  <button class="btn btn-close" data-bs-dismiss="modal"></button>
+               </div>
+               <div class="modal-body">
+                   <dl>
+                     <dt>Product Name</dt>
+                     <dd><input type="text" id="txtName" class="form-control"></dd>
+                     <dt>Price</dt>
+                     <dd><input type="number" id="txtPrice" class="form-control"></dd>
+                     <dt>Shiiped</dt>
+                     <dd>
+                        <select  id="lstCities" class="form-select">
+                           <option>Select City</option>
+                           <option > Delhi</option>
+                           <option >Hyd</option>
+                        </select>
+                     </dd>
+                     <dt>Stock</dt>
+                     <dd class="form-switch">
+                        <input type="checkbox" id="optStock" class="form-check-input">
+                     </dd>
+                   </dl>
+
+               </div>
+               <div class="modal-footer">
+                  <button class="btn btn-warning w-100" data-bs-dismiss="modalx" id="modalRegisterButton" onclick="RegisterClick()">Register</button>
+               </div>
+
+             </div>
+       </div>
+   </div>
+   <div id="detailsContainer" class="mt-3" style="display: none;">
+      <h3>Product Details</h3>
+      <dl class="row">
+         <dt class="col-3">Name</dt>
+         <dd class="col-9" id="lblName"></dd>
+         <dt class="col-3">Price</dt>
+         <dd class="col-9" id="lblPrice"></dd>
+         <dt class="col-3">City</dt>
+         <dd class="col-9" id="lblCity"> </dd>
+         <dt class="col-3">Stock</dt>
+         <dd class="col-9" id="lblStock"></dd>
+
+      </dl>
+      <button onclick="EditClick()" data-bs-target="#register" data-bs-toggle="modal" class="btn btn-warning"><span class="bi bi-pen-fill"></span>Edit</button>
+
+   </div>
+   
+
+
+
+   <script src="../node_modules/jquery/dist/jquery.js"></script>
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+   <script src="../script.js">
+
+   </script>
+</body>
+</html>
